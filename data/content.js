@@ -1,5 +1,3 @@
-// All portfolio text lives here. Edit this file to update the site.
-
 export const profile = {
   name: "Dimas Pangestu Restu Putra",
   handle: "dimas.pangestu",
@@ -89,6 +87,32 @@ export const projects = [
       { label: "github.com/dana-id", href: "https://github.com/dana-id" },
     ],
     tags: ["payments", "integration"],
+  },
+  {
+    id: "dana-qris-console",
+    method: "POST",
+    endpoint: "/v1.0/debit/notify",
+    org: "Personal",
+    title: "DANA QRIS Console: payment integration testing dashboard",
+    summary:
+      "A Next.js dashboard for testing DANA QRIS acquiring end to end against the sandbox: generate and pay QR codes, query, cancel and refund, and watch webhooks arrive in real time.",
+    bullets: [
+      [
+        "MPM (generate QR with live status polling) and CPM (scan the customer's QR with the phone camera via BarcodeDetector).",
+        "Query, cancel and refund flows with DANA SNAP status-code mapping.",
+        "Every request signed server-side with SHA256withRSA and SNAP headers; the private key never reaches the browser.",
+      ],
+      [
+        "Finish Notify webhook with signature verification, ported from the DANA Python SDK's parser to handle body escaping variants.",
+        "Invalid signatures return 401 and never update a transaction; storage failures return 500 so DANA retries.",
+        "Webhook log in Upstash Redis for serverless reliability on Vercel, and Basic Auth on the dashboard with constant-time comparison.",
+      ],
+    ],
+    chips: ["Next.js 16", "TypeScript", "DANA SNAP API", "QRIS", "SHA256withRSA", "Upstash Redis", "Vercel"],
+    links: [{ label: "GitHub repo", href: "https://github.com/dimspangestu/payment-integration" }],
+    tags: ["payments", "integration"],
+    wide: true,
+    feature: true,
   },
   {
     id: "fondofund",
