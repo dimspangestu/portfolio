@@ -1,3 +1,5 @@
+// All portfolio text lives here. Edit this file to update the site.
+
 export const profile = {
   name: "Dimas Pangestu Restu Putra",
   handle: "dimas.pangestu",
@@ -45,11 +47,11 @@ export const projects = [
         "Image-quality checks that tell users exactly why a photo was rejected.",
       ],
       [
-        "Best-match cosine similarity against several reference embeddings per person, stored in SQL Server.",
+        "Vector similarity search: best-match cosine similarity across several face-embedding vectors per person, stored in SQL Server.",
         "Async batch pipeline (asyncio, aiohttp) that builds embeddings from MinIO with controlled concurrency and retries.",
       ],
     ],
-    chips: ["FastAPI", "DeepFace", "OpenCV", "asyncio", "SQL Server", "MinIO", "Docker"],
+    chips: ["FastAPI", "DeepFace", "Vector embeddings", "OpenCV", "asyncio", "SQL Server", "MinIO", "Docker"],
     tags: ["ai"],
     wide: true,
   },
@@ -63,10 +65,11 @@ export const projects = [
       "A commercial accounting API that pulls a business's money movements from every source and matches them each month.",
     bullets: [
       "Integrations with Xero (OAuth 2.0), bank connections, POS systems and Shopee.",
+      "Pipelines pulling and consolidating data from PostgreSQL, Firebase and AWS sources.",
       "Parsing and normalising transaction history into one schema.",
       "Monthly matching of incoming and outgoing transactions, plus tax reporting.",
     ],
-    chips: ["Flask", "FastAPI", "GCP Cloud Run", "Xero API", "Google Drive API"],
+    chips: ["Flask", "FastAPI", "GCP Cloud Run", "PostgreSQL", "Firebase", "AWS", "Xero API"],
     tags: ["payments", "integration"],
   },
   {
@@ -241,11 +244,11 @@ export const experience = [
     org: "Ledgerowl",
     remote: true,
     role: "Backend Developer",
-    desc: "Financial automation API on GCP Cloud Run with Xero, bank, POS and Shopee integrations and automated monthly reconciliation.",
+    desc: "Financial automation API on GCP Cloud Run with Xero, bank, POS and Shopee integrations, data from PostgreSQL, Firebase and AWS, and automated monthly reconciliation.",
   },
   {
-    when: "2021 – Present",
-    sub: "Project-based",
+    when: "2021",
+    sub: "Project-based · 5 mos",
     org: "Freelance / Contract Projects",
     role: "Backend Developer",
     desc: "REST API for Badr (Node.js, Express, MySQL) and PadiUMKM (Python Flask).",
@@ -284,6 +287,6 @@ export const skills = [
   { h: "Frontend", p: "Next.js, React (JSX), Tailwind CSS, WordPress with custom Elementor, on-page SEO" },
   { h: "Payments & finance", p: "DANA (QRIS, Payment Gateway, Disbursement), Midtrans, Xero, bank and POS integrations, reconciliation" },
   { h: "Auth & integrations", p: "OAuth 2.0, SAML SSO, LDAP, Google Workspace, Calendar and Drive APIs, Microsoft Graph" },
-  { h: "Data & AI", p: "SQL Server, MySQL, PostgreSQL, MinIO, DeepFace, OpenCV, scikit-learn" },
+  { h: "Data & AI", p: "SQL Server, MySQL, PostgreSQL, Firebase, AWS, MinIO, vector embeddings & similarity search, DeepFace, OpenCV, scikit-learn, text-to-speech (TTS)" },
   { h: "DevOps", p: "Docker, GitLab CI/CD, Linux, Nginx, GCP (Cloud Run), AWS" },
 ];
